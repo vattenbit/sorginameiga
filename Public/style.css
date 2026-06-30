@@ -1,0 +1,199 @@
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	background-color: #FF7F00;
+	color: #FFF;
+}
+
+/* Cabecera */
+#cabecera{
+	margin:auto;
+	height:150px;
+	width:1000px;
+	background-image:url(images/cabecera.jpg);
+	background-repeat: no-repeat;
+}
+
+#titulo{
+	font-size: 50px;
+	text-align: right;
+	font-style: italic;
+	padding-top: 40px;
+}
+
+#bajo_titulo{
+	font-size: 10px;
+	color: #FF7F00;
+	width:1000px;
+	height:15px;
+	text-align: right;
+}
+
+#bajo_titulo img{
+	border: 0px;	
+}
+
+#bajo_titulo #esp{
+	padding-left: 15px;
+	padding-right: 5px;
+}
+
+#bajo_titulo #ing{
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+/* Menu */
+#menu{
+	width:1000px;
+	text-align: right;
+}
+
+#menu ul{
+	list-style-type:none;
+	margin: 0px;;
+}
+
+#cabecera ul li{
+	font-size: 16px;
+	font-style: italic;
+	display: inline;
+	padding-left: 20px;	
+}
+
+#cabecera ul li a{
+	text-decoration:none;
+}
+
+#cabecera ul li a:link{
+	color: #FFF;
+	text-decoration:none;
+}
+
+#cabecera ul li a:visited{
+	color: #FFF;
+	text-decoration:none;
+
+}
+
+#cabecera ul li a:hover{
+	color: #333;
+	text-decoration:none;
+
+}
+
+/* Pie de Pagina */
+#piedepagina{
+	width: 1000px;
+	height: 13px;
+	background-color: #333;
+	margin: auto;
+	font-size: 10px;
+	color: #FF7F00;
+	
+}
+
+#piedepagina #contador{	
+	float: left;
+	padding-left: 10px;
+}
+
+#piedepagina #creditos{	
+	float: right;
+	padding-right: 10px;
+}
+
+#piedepagina #creditos a{	
+	color: #FFF;
+	text-decoration:none;
+}
+
+/* Pagina de Index */
+#cuerpo_index{
+	width: 1000px;
+	height: 450px;
+	margin: auto;
+	text-align: center;
+}
+
+#texto_presentacion{
+	width: 600px;
+	float: left;
+	padding-left: 20px;
+	padding-top:25px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+#foto_presentacion{
+	width: 320px;
+	float: right;
+	padding-left: 20px;
+	padding-top: 55px;
+}
+
+/* Pagina de Perros */
+#cuerpo_perros{
+	width: 1000px;
+	margin: auto;
+}
+
+#titulosexo{
+	font-size: 30px;
+}
+
+#tablaperros{
+	padding-top:10px;
+	padding-bottom:50px;
+}
+
+.cuadroperro{
+	width:250px;
+	font-size:20px;
+	text-align:center;
+}
+
+#titulo_perro{
+	margin-top:10px;
+	margin-bottom:20px;
+	font-size:30px;
+	text-align:center;
+}
+
+#foto_perro{
+	margin-bottom:20px;
+	text-align:center;
+}
+
+#botonvolver{
+	text-align:center;
+	font-size:30px;
+}
+
+#botonvolver a{
+	padding:5px;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#333;
+}
+
+#nombrepedigree{
+	background-color:#333;
+	padding:3px;	
+}
+
+#tablapedigree{
+	font-size:10px;
+	text-align:left;
+	padding-left:50px;
+}
+
+/* Página de contacto */
+#contenedorformulario{
+	padding-left: 30px;
+}
+
+#correoytelefono{
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+}

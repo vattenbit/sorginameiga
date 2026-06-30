@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="#(lang)">
+    <head>
+        <meta charset="utf-8">
+        <link href="/style.css" type="text/css" rel="stylesheet" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <title>Sorgiña Meiga - #(t.title)</title>
+    </head>
+    <body>
+        #extend("partials/header")
+        #import("content")
+        #extend("partials/footer")
+    </body>
+</html>

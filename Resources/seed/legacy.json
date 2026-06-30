@@ -1,0 +1,455 @@
+{
+  "counter": 445682,
+  "dogs": [
+    {
+      "id": 22,
+      "sex": "hembra",
+      "name": "CH. E. Pt. GIB. INT. XIANA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH SUNTORY ADONIS",
+        "b": "CINZA SORGIÑA-MEIGA",
+        "aa": "CH SUNTORY REIGN MAKER",
+        "ab": "SUNTORY ABSOLUT ABBY",
+        "ba": "SHIAWANDI KMEER ROUGE",
+        "bb": "SUITE-DANCER DE BOMARZO",
+        "aaa": "CH SUNTORY MIGHTY MERLIN",
+        "aab": "CH SUNTORY GODIVA",
+        "aba": "CH SUNTORY STARBUCK",
+        "abb": "SUNTORY ATHENA",
+        "baa": "SHIAWANDI OVERLORD",
+        "bab": "CH. MORGAN´S ABADESA",
+        "bba": "NOSREDNA MR BIG MAN",
+        "bbb": "YURI"
+      }
+    },
+    {
+      "id": 23,
+      "sex": "hembra",
+      "name": "CH.E .Pt .GIB  INT CHIC CHOIX STAR SO BRIGHT",
+      "ancestors": {
+        "a": "CH.CHIC CHOIX SOUTHERN STAR",
+        "b": "CH. BARJEA´S  SAWYER",
+        "aa": "CH. BENEFIC SOLAR ECLIPSE",
+        "ab": "CH. CHIC CHOIX TA SEN STELLA",
+        "ba": "CH. CH. BARJEA MAI LING JOSHUA",
+        "bb": "CH. BARJEA´S CAT ON A HT´TN´ROOF",
+        "aaa": "DARAGOJ STORM WARNING",
+        "aab": "CH. BENEFIC VARIETY QUEEN",
+        "aba": "CH. KINDERLAND TA SEN TIP O´TH´ROCK",
+        "abb": "CH. CHIC CHOIX ELLEN O´HARA",
+        "baa": "CH. BARJEA MISCHIEF´S FALCORE",
+        "bab": "CH. BARJEA MAI LING SUMMER WIND",
+        "bba": "CH. BARJEA MISCHIEF´S BASTIAN",
+        "bbb": "CH. BARJEA MISCHIEF´S NIKITA"
+      }
+    },
+    {
+      "id": 25,
+      "sex": "hembra",
+      "name": "CH.E.Pt  KULTA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH SUNTORY ADONIS",
+        "b": "CH. CHIC CHOIX STAR SO BRIGHT",
+        "aa": "CH SUNTORY REIGN MAKER",
+        "ab": "SUNTORY ABSOLUT ABBY",
+        "ba": "CH.CHIC CHOIX SOUTHERN STAR",
+        "bb": "CH. BARJEA`S SAWYER",
+        "aaa": "CH SUNTORY MIGHTY MERLIN",
+        "aab": "CH SUNTORY GODIVA",
+        "aba": "CH SUNTORY STARBUCK",
+        "abb": "SUNTORY ATHENA",
+        "baa": "CH. BENEFIC SOLAR ECLIPSE",
+        "bab": "CH. CHI CHOIX TA SEN ESTELLA",
+        "bba": "CH. BARJEA MAI LING JOSHUA",
+        "bbb": "CH. BARJEA´S CAT ON A HT´ TN´ ROOF"
+      }
+    },
+    {
+      "id": 26,
+      "sex": "hembra",
+      "name": "FUME SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "XARDON SORGIÑA-MEIGA",
+        "b": "CINZA SORGIÑA-MEIGA",
+        "aa": "SHIAWANDI KMEER ROUGE",
+        "ab": "SUA SORGIÑA-MEIGA",
+        "ba": "SHIAWANDI KMEER ROUGE",
+        "bb": "SUITE-DANCER DE BOMARZO",
+        "aaa": "CH. SHIAWANDI OVERLORD",
+        "aab": "CH. MORGAN´S ABADESA",
+        "aba": "NOSREDNA MR BIG MAN",
+        "abb": "DAHA SORGIÑA-MEIGA",
+        "baa": "CH. SHIAWANDI OVERLORD",
+        "bab": "CH. MORGAN´S ABADESA",
+        "bba": "NOSREDNA MR BIG MAN",
+        "bbb": "YURI"
+      }
+    },
+    {
+      "id": 27,
+      "sex": "macho",
+      "name": "CH.USA CH.Pt SUNTORY ADONIS 2001-2017",
+      "ancestors": {
+        "a": "CH. SUNTORY REIGN MAKER",
+        "b": "SUNTORY ABSOLUT ABBY",
+        "aa": "CH. SUNTORY MIGHTY MERLIN",
+        "ab": "CH. SUNTORY GODIVA",
+        "ba": "CH. SUNTORY STARBUCK",
+        "bb": "SUNTORY ATHENA",
+        "aaa": "CH. SUNTORY STARBUCK",
+        "aab": "CH. SUNTORY MARTAJA ALMOST ANGEL",
+        "aba": "CH. SUNTORY SUPERFUDGE",
+        "abb": "CH. SUNTORY COTILLION",
+        "baa": "CH. SUNTORY SUPERFUDGE",
+        "bab": "CH. SUNTORY COTILLION",
+        "bba": "CH. SUNTORY ENTERPRISE",
+        "bbb": "CH. SUNTORY NEVER AMBER"
+      }
+    },
+    {
+      "id": 30,
+      "sex": "hembra",
+      "name": "MAHOU SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH. EDI REDMAIN SORGIÑA-MEIGA",
+        "b": "FUME SORGIÑA_MEIGA",
+        "aa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "ab": "RUIVA SORGIÑA-MEIGA",
+        "ba": "XARDON SORGIÑA-MEIGA",
+        "bb": "CINZA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "aab": "KAI_LA_SHA FIREFLY II",
+        "aba": "CH. SUNTORY ADONIS",
+        "abb": "IRIS DE SOLDEVILA-DOG",
+        "baa": "SHIAWANDI KMEER-ROUGE",
+        "bab": "SUA SORGIÑA-MEIGA",
+        "bba": "SHIAWANDI KMEER ROUGE",
+        "bbb": "SUITE-DANCER DE BOMARZO"
+      }
+    },
+    {
+      "id": 34,
+      "sex": "macho",
+      "name": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH KAI-LA_SHA JUSTA JIGOLO",
+        "b": "KAI_LA_SHA FIREFLY II",
+        "aa": "CH KAI_LA_SHA TOM-TRU",
+        "ab": "KAI-LA_SHA CHARLIE`S ANGEL",
+        "ba": "CH TABU PA´S COURAGE UNDER FIRE",
+        "bb": "CH KAI_LA_SHA ALPENROUSE OF BO",
+        "aaa": "CH JMA`S INFRA RED",
+        "aab": "CH KAI_LA_SHA-CHAR",
+        "aba": "CH KAI_LA_SHA SOMETHIN`REGAL",
+        "abb": "KAI_LA_SHA PINK PEONY",
+        "baa": "CH TABU`S CL SPRING FORWARD",
+        "bab": "CH TABU CL STRAIGHT TO HEART",
+        "bba": "SHARBO SENGE",
+        "bbb": "KAI_LA_SHA SILLY NILLY"
+      }
+    },
+    {
+      "id": 36,
+      "sex": "hembra",
+      "name": "CH Pt. MYRTLE LA LLORONA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "POLVO VAINILLA SORGIÑA-MEIGA",
+        "b": "ENRIQUETA  SORGIÑA-MEIGA",
+        "aa": "CH. SUNTORY ADONIS",
+        "ab": "CH. CHIC CHOIX STAR SO BRIGHT",
+        "ba": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "bb": "FUME SORGIÑA-MEIGA",
+        "aaa": "CH. SUNTORY REIGN MAKER",
+        "aab": "SUNTORY ABSOLUT ABBY",
+        "aba": "CH. CHIC CHOIX SOURTHERN STAR",
+        "abb": "CH. BARJEA`S SAWYER",
+        "baa": "CH .KAI-LA-SHA JUSTA JIGOLO",
+        "bab": "KAI-LA-SHA FIREFLY II",
+        "bba": "XARDON SORGIÑA-MEIGA",
+        "bbb": "CINZA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 38,
+      "sex": "macho",
+      "name": "CH Pt. CH E.GCH E. VCH E. TXIKTXOIZ SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH. EDI REDMAIN SORGIÑA-MEIGA",
+        "b": "CH. CHIC CHOIX STAR SO BRIGHT",
+        "aa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "ab": "RUIVA SORGIÑA-MEIGA",
+        "ba": "CH. CHIC CHOIX SOUTHERN STAR",
+        "bb": "CH. BARJEA`S SAWYER",
+        "aaa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "aab": "KAI_LA_SHA FIREFLY II",
+        "aba": "CH. SUNTORY ADONIS",
+        "abb": "IRIS DE SOLDEVILA-DOG",
+        "baa": "CH. BENEFIC SOLAR ECLIPSE",
+        "bab": "CH. CHI CHOIX TA SEN ESTELLA",
+        "bba": "CH. BARJEA MAI LING JOSHUA",
+        "bbb": "CH. BARJEA´S CAT ON A HT´ TN´ ROOF"
+      }
+    },
+    {
+      "id": 39,
+      "sex": "macho",
+      "name": "VCH PT.VCH E. GCH E. CH.E CH.Pt EDI REDMAIN SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "b": "RUIVA SORGIÑA-MEIGA",
+        "aa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "ab": "KAI_LA_SHA FIREFLY II",
+        "ba": "CH. SUNTORY ADONIS",
+        "bb": "IRIS DE SOLDEVILA-DOG",
+        "aaa": "CH. KAI_LA_SHA TOM-TRU",
+        "aab": "CH. KAI_LA_SHA CHARLIE`S ANGEL",
+        "aba": "CH. TABU PA´S COURAGE UNDER FIRE",
+        "abb": "CH. KAI_LA_SHA ALPENROSE OF BO",
+        "baa": "CH. SUNTORY REIGN MAKER",
+        "bab": "SUNTORY ABSOLUT ABBY",
+        "bba": "ATHALIER",
+        "bbb": "BASTERBERRI WOLD SONATA"
+      }
+    },
+    {
+      "id": 40,
+      "sex": "hembra",
+      "name": "JCH E CH E. INVERNALIA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH. EDI REDMAIN SORGIÑA-MEIGA",
+        "b": "FUME SORGIÑA_MEIGA",
+        "aa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "ab": "RUIVA SORGIÑA-MEIGA",
+        "ba": "XARDON SORGIÑA-MEIGA",
+        "bb": "CINZA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "aab": "KAI_LA_SHA FIREFLY II",
+        "aba": "CH. SUNTORY ADONIS",
+        "abb": "IRIS DE SOLDEVILA-DOG",
+        "baa": "SHIAWANDI KMEER-ROUGE",
+        "bab": "SUA SORGIÑA-MEIGA",
+        "bba": "SHIAWANDI KMEER ROUGE",
+        "bbb": "SUITE-DANCER DE BOMARZO"
+      }
+    },
+    {
+      "id": 41,
+      "sex": "macho",
+      "name": "KAI-LA-SHA JACK DANIEL",
+      "ancestors": {
+        "a": "CH. KAI-LA-SHA RUMTEK SOUTHERN COMFORT",
+        "b": "GCH CH KAI-LA-SHA RUMTEK ROSETTE",
+        "aa": "CH. KAI-LA-SHA SHERMAN O´RUMTEK",
+        "ab": "CH. KAI-LA-SHA RYANNA",
+        "ba": "CH. KAI-LA-SHA SHERMAN O´RUMTEK",
+        "bb": "KAI-LA-SHA FIREFLY II",
+        "aaa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "aab": "CH.KAI-LA-SHA HOT TAMALE",
+        "aba": "CH. TABU PA´S COURAGE UNDER FIRE",
+        "abb": "KAI-LA-SHA GILDED LILY",
+        "baa": "CH .KAI-LA-SHA JUSTA JIGOLO",
+        "bab": "CH. KAI-LA-SHA HOT TAMALE",
+        "bba": "CH. TABU PA´S COURAGE UNDER FIRE",
+        "bbb": "CH. KAI-LA-SHA ALPENROSE OF BO"
+      }
+    },
+    {
+      "id": 42,
+      "sex": "hembra",
+      "name": "CH. Pt CANDELARIA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH SUNTORY ADONIS",
+        "b": "ENRIQUETA  SORGIÑA-MEIGA",
+        "aa": "CH SUNTORY REIGN MAKER",
+        "ab": "SUNTORY ABSOLUT ABBY",
+        "ba": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "bb": "FUME SORGIÑA-MEIGA",
+        "aaa": "CH SUNTORY MIGHTY MERLIN",
+        "aab": "CH SUNTORY GODIVA",
+        "aba": "CH SUNTORY STARBUCK",
+        "abb": "SUNTORY ATHENA",
+        "baa": "CH .KAI-LA-SHA JUSTA JIGOLO",
+        "bab": "KAI-LA-SHA FIREFLY II",
+        "bba": "XARDON SORGIÑA-MEIGA",
+        "bbb": "CINZA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 43,
+      "sex": "hembra",
+      "name": "SASSENACH SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "CH. EDI REDMAIN SORGIÑA-MEIGA",
+        "b": "XIANA SORGIÑA-MEIGA",
+        "aa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "ab": "RUIVA SORGIÑA-MEIGA",
+        "ba": "CH. SUNTORY ADONIS",
+        "bb": "CINZA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI_LA_SHA JUSTA JIGOLO",
+        "aab": "KAI_LA_SHA FIREFLY II",
+        "aba": "CH. SUNTORY ADONIS",
+        "abb": "IRIS DE SOLDEVILA-DOG",
+        "baa": "CH. SUNTORY REIGN MAKER",
+        "bab": "SUNTORY ABSOLUT ABBY",
+        "bba": "SHIAWANDI KMEER ROUGE",
+        "bbb": "SUITE-DANCER DE BOMARZO"
+      }
+    },
+    {
+      "id": 44,
+      "sex": "hembra",
+      "name": "MUGLE SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "POLVO VAINILLA SORGIÑA-MEIGA",
+        "b": "ENRIQUETA  SORGIÑA-MEIGA",
+        "aa": "CH. SUNTORY ADONIS",
+        "ab": "CH. CHIC CHOIX STAR SO BRIGHT",
+        "ba": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "bb": "FUME SORGIÑA-MEIGA",
+        "aaa": "CH. SUNTORY REIGN MAKER",
+        "aab": "SUNTORY ABSOLUT ABBY",
+        "aba": "CH. CHIC CHOIX SOURTHERN STAR",
+        "abb": "CH. BARJEA`S SAWYER",
+        "baa": "CH .KAI-LA-SHA JUSTA JIGOLO",
+        "bab": "KAI-LA-SHA FIREFLY II",
+        "bba": "XARDON SORGIÑA-MEIGA",
+        "bbb": "CINZA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 46,
+      "sex": "hembra",
+      "name": "CH E. JCH E GENOVEVA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "KAI _LA_SHA JACK DANIEL",
+        "b": "CH.P CANDELARIA SORGIÑA-MEIGA",
+        "aa": "CH. RUMTEK SOUTHERN COMFORT",
+        "ab": "GCH. KAI_LA_SHA RUMTEK ROSETTE",
+        "ba": "CH. SUNTORY ADONIS",
+        "bb": "ENRIQUETA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI_LA_SHA SHERMAN O´RUMTEK",
+        "aab": "CH KAI_LA_SHA RYANNA",
+        "aba": "CH KAI_LA_SHA SHERMAN O´RUMTEK",
+        "abb": "KAI-LA-SHA FIREFLY II",
+        "baa": "CH. SUNTORY REIGN MAKER",
+        "bab": "SUNTORY ABSOLUT ABBY",
+        "bba": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "bbb": "FUME SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 47,
+      "sex": "hembra",
+      "name": "MACARENA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "KAI _LA_SHA JACK DANIEL",
+        "b": "CH GENOVEVA SORGIÑA-MEIGA",
+        "aa": "CH. KAI_LA_SHA RUMTEK SOUTHERN COMFORT",
+        "ab": "GCH CH KAI-LA-SHA RUMTEK ROSETTE",
+        "ba": "KAI_LA_SHA JACK DANIEL",
+        "bb": "CH CANDELARIA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI-LA-SHA SHERMAN O`RUMTEK",
+        "aab": "CH. KAI-LA-SHA RYANNA",
+        "aba": "CH. KAI-LA-SHA SHERMAN O`RUMTEK",
+        "abb": "KAI-LA-SHA FIREFLY II",
+        "baa": "CH. KAI_LA_SHA RUMTEK SOUTHERN COMFORT",
+        "bab": "GCH CH KAI-LA-SHA RUMTEK ROSETTE",
+        "bba": "CH. SUNTORY ADONIS",
+        "bbb": "ENRIQUETA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 48,
+      "sex": "hembra",
+      "name": "JCH E. BRIANNA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "KAI _LA_SHA JACK DANIEL",
+        "b": "SASSENACH SORGIÑA-MEIGA",
+        "aa": "CH. KAI_LA_SHA RUMTEK SOUTHERN COMFORT",
+        "ab": "GCH. KAI_LA_SHA RUMTEK ROSETTE",
+        "ba": "CH EDI REDMAIN SORGIÑA-MEIGA",
+        "bb": "XIANA SORGIÑA-MEIGA",
+        "aaa": "CH. KAI_LA_SHA SHERMAN O´RUMTEK",
+        "aab": "CH KAI_LA_SHA RYANNA",
+        "aba": "CH KAI_LA_SHA SHERMAN O´RUMTEK",
+        "abb": "KAI-LA-SHA FIREFLY II",
+        "baa": "KAI_LA_SHA MINROU SORGIÑA-MEIGAS",
+        "bab": "RUIVA SORGIÑA-MEIGA",
+        "bba": "CH. SUNTORY ADONIS",
+        "bbb": "CINZA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 50,
+      "sex": "hembra",
+      "name": "VALYRIA SORGIÑA-MEIGA",
+      "ancestors": {
+        "a": "GCH.TXIK TXOIZ SORGIÑA-MEIGA",
+        "b": "CH. INVERNALIA SORGIÑA-MEIGA",
+        "aa": "GCH.EDI REDMAIN SORGIÑAMEIGA",
+        "ab": "CH. CHIC CHOIX STAR SO BRIGHT",
+        "ba": "GCH. EDI REDMAIN SORGIÑA-MEIGA",
+        "bb": "FUME SORGIÑA-MEIGA",
+        "aaa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "aab": "RUIVA SORGIÑA-MEIGA",
+        "aba": "CH.CHIC CHOIX SOUTHERN STAR",
+        "abb": "CH.BARJEA`S SAWYER",
+        "baa": "KAI_LA_SHA MINROU SORGIÑA-MEIGA",
+        "bab": "RUIVA SORGIÑA-MEIGA",
+        "bba": "XARDON SORGIÑA-MEIGA",
+        "bbb": "CINZA SORGIÑA-MEIGA"
+      }
+    },
+    {
+      "id": 51,
+      "sex": "macho",
+      "name": "OSCAR DAR TIBETU",
+      "ancestors": {
+        "a": "GCH. CZ CH. PL WESTERN DAR TIBETU",
+        "b": "JCH CZ KI CH KAI_LA_SHA SAXANA",
+        "aa": "CHA.CZ.CMKU MOONSHINE DAR TIBETU",
+        "ab": "CH CZ.CMKU.LT.SK. ROXANA DAR TIBETU",
+        "ba": "CH. KAI_LA_SHA LEGACY",
+        "bb": "CH. KAI_LA_SHA HENNA",
+        "aaa": "CH. CZ EST KAI_LA_SHA FIRE POWER",
+        "aab": "CH.BG WINTER FLOWER DAR TIBETU",
+        "aba": "CH. CZ.RO SIMBAD DEL ALCAZAR",
+        "abb": "CH.CZ GIBR ELIZABETH BRI-JACK",
+        "baa": "CH.KAI_SHA KEEPSAKE",
+        "bab": "KAI_LA_SHA KISS N TELL",
+        "bba": "CH.KAI_LA_SHA SHERMAN O´RUMTEK",
+        "bbb": "KAI_LA_SHA FIREFLY II"
+      }
+    }
+  ],
+  "galleries": [
+    {
+      "id": 2,
+      "name": "PEQUEÑINES"
+    },
+    {
+      "id": 5,
+      "name": "PERROS Y CACHORROS/ DOGS AND PUPPIES"
+    },
+    {
+      "id": 6,
+      "name": "Felices ccon sus dueños"
+    },
+    {
+      "id": 7,
+      "name": "1 EXPOSICION OPORTO 2022"
+    },
+    {
+      "id": 8,
+      "name": "NUESTROS NUEVOS NENES EN SUS CASAS"
+    },
+    {
+      "id": 9,
+      "name": "PUPPIES"
+    },
+    {
+      "id": 10,
+      "name": "EXPOSICION MADRID 2023"
+    }
+  ]
+}
