@@ -18,4 +18,6 @@ func routes(_ app: Application) throws {
         Admin.redirectMiddleware(path: "/admin/login")
     )
     try admin.register(collection: AdminDogController())
+    try admin.register(collection: AdminPuppyController())
+    try admin.register(collection: AdminGalleryController())
 }

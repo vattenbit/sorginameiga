@@ -33,6 +33,60 @@ struct AdminDogFormContext: Encodable {
     let pedigree: Pedigree
 }
 
+// MARK: - Puppies
+
+struct AdminPuppyRow: Encodable {
+    let id: Int
+    let name: String
+    let available: Bool
+}
+
+struct AdminPuppiesContext: Encodable {
+    let username: String
+    let puppies: [AdminPuppyRow]
+}
+
+struct AdminPuppyFormContext: Encodable {
+    let username: String
+    let isNew: Bool
+    let action: String
+    let name: String
+    let available: Bool
+}
+
+/// Submitted puppy form. `available` arrives as the select value "1" / "0".
+struct PuppyForm: Content {
+    var name: String
+    var available: String
+
+    var isAvailable: Bool { available == "1" }
+}
+
+// MARK: - Galleries
+
+struct AdminGalleryRow: Encodable {
+    let id: Int
+    let name: String
+}
+
+struct AdminGalleriesContext: Encodable {
+    let username: String
+    let galleries: [AdminGalleryRow]
+}
+
+struct AdminGalleryFormContext: Encodable {
+    let username: String
+    let isNew: Bool
+    let action: String
+    let name: String
+}
+
+struct GalleryForm: Content {
+    var name: String
+}
+
+// MARK: - Dogs
+
 /// Submitted dog form. HTML always sends every named field (empty = ""), so the
 /// pedigree fields are plain (non-optional) strings.
 struct DogForm: Content {
