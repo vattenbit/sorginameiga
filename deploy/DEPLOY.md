@@ -48,12 +48,51 @@ admin photo uploads work).
 
 ---
 
-## 8d — CI build → Artifact Registry
-_(to be filled in)_
+## 8d — Build the image → Artifact Registry ✅ DONE (manual, via Cloud Build)
+
+Repo: `europe-west3-docker.pkg.dev/sorgina-meiga/sorginameiga`. Built in the
+cloud (native amd64) rather than cross-compiling on the ARM Mac:
+
+```bash
+gcloud artifacts repositories create sorginameiga \
+    --repository-format=docker --location="$REGION"
+
+gcloud builds submit --region="$REGION" \
+    --tag="$REGION-docker.pkg.dev/$PROJECT_ID/sorginameiga/web:latest" \
+    --timeout=2400s --machine-type=e2-highcpu-8
+```
+
+(A GitHub Actions pipeline can replace this later — see step 8g/optional.)
 
 ## 8e — Deploy to Cloud Run
-_(to be filled in — includes: secrets DATABASE_URL & ADMIN_PASSWORD, the GCS
-volume mount at /app/Public/images, region, min/max instances)_
+
+The Neon connection string lives in Secret Manager as `database-url`. The images
+bucket is mounted at `/app/Public/images`. Migrations were already applied to
+Neon (8b), so the container only needs to `serve`.
+
+```bash
+IMAGE="$REGION-docker.pkg.dev/$PROJECT_ID/sorginameiga/web:latest"
+SA="$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')-compute@developer.gserviceaccount.com"
+
+# The Cloud Run service account needs to read the secret and read/write the bucket.
+gcloud secrets add-iam-policy-binding database-url \
+    --member="serviceAccount:$SA" --role="roles/secretmanager.secretAccessor"
+gcloud storage buckets add-iam-policy-binding "$BUCKET" \
+    --member="serviceAccount:$SA" --role="roles/storage.objectAdmin"
+
+gcloud run deploy sorginameiga \
+    --image="$IMAGE" \
+    --region="$REGION" \
+    --allow-unauthenticated \
+    --port=8080 \
+    --set-secrets=DATABASE_URL=database-url:latest \
+    --add-volume=name=images,type=cloud-storage,bucket=sorginameiga-images \
+    --add-volume-mount=volume=images,mount-path=/app/Public/images \
+    --min-instances=0 --max-instances=4 \
+    --cpu=1 --memory=512Mi --concurrency=80
+```
+
+Then open the service URL that `gcloud run deploy` prints and verify.
 
 ## 8f — Domain, DNS cutover & go-live
 _(to be filled in — includes: re-extract the legacy seed fresh, map
