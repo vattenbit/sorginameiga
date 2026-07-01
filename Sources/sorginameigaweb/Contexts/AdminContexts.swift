@@ -85,6 +85,30 @@ struct GalleryForm: Content {
     var name: String
 }
 
+// MARK: - Photos
+
+struct AdminPhotoItem: Encodable {
+    let index: Int
+    let url: String
+    /// True for a dog's main photo (index 0).
+    let isMain: Bool
+}
+
+struct AdminPhotosContext: Encodable {
+    let username: String
+    let kind: String
+    let id: Int
+    let title: String
+    let photos: [AdminPhotoItem]
+    let backURL: String
+    let error: String?
+}
+
+/// A single-file photo upload.
+struct PhotoUpload: Content {
+    var file: File
+}
+
 // MARK: - Dogs
 
 /// Submitted dog form. HTML always sends every named field (empty = ""), so the

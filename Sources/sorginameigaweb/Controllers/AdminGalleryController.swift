@@ -75,6 +75,7 @@ final class AdminGalleryController: RouteCollection, Sendable {
             throw Abort(.notFound)
         }
         try await gallery.delete(on: req.db)
+        PhotoStorage.removeFolder(PhotoKind.galleries.subpath(id: id), on: req)
         return req.redirect(to: "/admin/galerias")
     }
 }

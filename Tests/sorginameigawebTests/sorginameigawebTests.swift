@@ -286,4 +286,42 @@ struct sorginameigawebTests {
             #expect(try await Gallery.query(on: app.db).count() == before)
         }
     }
+
+    @Test("Photo management is protected, renders, and rejects non-JPEG uploads")
+    func adminPhotos() async throws {
+        final class Box: @unchecked Sendable { var cookies: HTTPCookies? }
+        let box = Box()
+        try await withApp { app in
+            // Protected without a session.
+            try await app.testing().test(.GET, "admin/fotos/perros/27", afterResponse: { res async in
+                #expect(res.status == .seeOther)
+            })
+            try await app.testing().test(.POST, "admin/login", beforeRequest: { req in
+                try req.content.encode(["username": "Pilar&Estibaliz", "password": "changeme"], as: .urlEncodedForm)
+            }, afterResponse: { res async in box.cookies = res.headers.setCookie })
+
+            // Manage page for an existing dog.
+            try await app.testing().test(.GET, "admin/fotos/perros/27", beforeRequest: { req in
+                if let c = box.cookies { req.headers.cookie = c }
+            }, afterResponse: { res async in
+                #expect(res.status == .ok)
+                #expect(res.body.string.contains("Subir foto"))
+            })
+
+            // Unknown entity → 404.
+            try await app.testing().test(.GET, "admin/fotos/galerias/999999", beforeRequest: { req in
+                if let c = box.cookies { req.headers.cookie = c }
+            }, afterResponse: { res async in
+                #expect(res.status == .notFound)
+            })
+
+            // A non-JPEG upload is rejected (and no file is written).
+            try await app.testing().test(.POST, "admin/fotos/galerias/2", beforeRequest: { req in
+                if let c = box.cookies { req.headers.cookie = c }
+                try req.content.encode(PhotoUpload(file: File(data: "not a jpeg", filename: "x.jpg")), as: .formData)
+            }, afterResponse: { res async in
+                #expect(res.status == .unprocessableEntity)
+            })
+        }
+    }
 }

@@ -184,3 +184,37 @@ body {
     font-size: 12px;
 }
 .form_actions { display: flex; gap: 10px; }
+
+/* Photo management */
+.upload_form {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+.upload_form label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: bold; }
+.photo_grid { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.photo_cell {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+}
+.photo_cell img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; display: block; }
+.photo_cell form { margin-top: 8px; }
+.photo_main {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FF7F00;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+}

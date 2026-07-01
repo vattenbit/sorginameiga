@@ -85,6 +85,7 @@ final class AdminDogController: RouteCollection, Sendable {
             throw Abort(.notFound)
         }
         try await dog.delete(on: req.db)
+        PhotoStorage.removeFolder(PhotoKind.dogs.subpath(id: id), on: req)
         return req.redirect(to: "/admin/perros")
     }
 }
