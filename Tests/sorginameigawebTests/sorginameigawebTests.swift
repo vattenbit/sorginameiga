@@ -42,6 +42,29 @@ struct sorginameigawebTests {
         }
     }
 
+    @Test("Legacy .php URLs redirect (301) to the new clean routes")
+    func legacyRedirects() async throws {
+        try await withApp { app in
+            let cases: [(String, String)] = [
+                ("/index.php", "/"),
+                ("/index.php?idioma=ing", "/en"),
+                ("/perros.php?sexo=macho", "/machos"),
+                ("/perros.php?sexo=hembra&idioma=ing", "/en/females"),
+                ("/verperro.php?id=27", "/perro/27"),
+                ("/verperro.php?id=27&idioma=ing", "/en/dog/27"),
+                ("/cachorros.php", "/cachorros"),
+                ("/galeria.php?idioma=ing", "/en/gallery"),
+                ("/contactos.php", "/contacto"),
+            ]
+            for (from, to) in cases {
+                try await app.testing().test(.GET, from, afterResponse: { res async in
+                    #expect(res.status == .permanentRedirect || res.status == .movedPermanently)
+                    #expect(res.headers.first(name: .location) == to)
+                })
+            }
+        }
+    }
+
     @Test("Legacy seed decodes with correct counts and UTF-8 encoding")
     func legacySeed() async throws {
         try await withApp { app in

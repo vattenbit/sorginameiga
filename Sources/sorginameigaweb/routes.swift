@@ -2,6 +2,9 @@ import Fluent
 import Vapor
 
 func routes(_ app: Application) throws {
+    // 301 redirects from the legacy .php URLs.
+    try app.register(collection: LegacyRedirectController())
+
     // Public site.
     try app.register(collection: HomeController())
     try app.register(collection: DogController())
