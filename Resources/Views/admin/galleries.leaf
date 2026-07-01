@@ -1,7 +1,10 @@
 #extend("admin/layout"):
 #export("content"):
 <h1>Administración de galerías</h1>
-<p><a class="admin_button" href="/admin/galerias/nueva">+ Agregar nueva galería</a></p>
+<div class="admin_toolbar">
+    <a class="admin_button secondary" href="/admin">← Volver al panel</a>
+    <a class="admin_button" href="/admin/galerias/nueva">+ Agregar nueva galería</a>
+</div>
 
 #if(count(galleries) == 0):
 <p>No hay galerías agregadas.</p>

@@ -1,6 +1,6 @@
-<div id="piedepagina">
-    <footer>
-        <div id="contador">#if(layout.visitCount):#(layout.t.totalOf)#(layout.visitCount)#(layout.t.visitsSince)#endif</div>
-        <div id="creditos">#(layout.t.credits)</div>
-    </footer>
-</div>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p class="footer-count">#if(layout.visitCount):#(layout.t.totalOf)<strong>#(layout.visitCount)</strong>#(layout.t.visitsSince)#endif</p>
+        <p class="footer-credits">#(layout.t.credits)</p>
+    </div>
+</footer>

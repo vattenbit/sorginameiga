@@ -1,15 +1,15 @@
 #extend("base"):
 #export("content"):
-<div id="cuerpo_perros">
-    <div id="titulosexo">#(title)</div>
-    <div id="tablaperros">
+<div class="container">
+    <h1 class="page-title">#(title)</h1>
+    <div class="card-grid">
         #for(dog in dogs):
-        <div class="cuadroperro">
-            <a href="#(dog.url)">
-                <img class="foto_listado" src="#(dog.photo)" alt="#(dog.name)"><br />
-            </a>
-            #(dog.name)
-        </div>
+        <a class="card" href="#(dog.url)">
+            <div class="card-photo">
+                <img src="#(dog.photo)" alt="#(dog.name)" loading="lazy">
+            </div>
+            <span class="card-name">#(dog.name)</span>
+        </a>
         #endfor
     </div>
 </div>

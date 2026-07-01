@@ -156,7 +156,8 @@ pick up any recent changes.
 | 4 | Puppies + photo galleries | ✅ Done |
 | 5 | Contact page (details only, matching current production) | ✅ Done |
 | 6 | Admin area — CRUD + photo management, with security fixes (bcrypt, sessions, validated uploads) | ✅ Done |
-| 7 | Deployment / cutover — container + managed DB, 301 redirects from legacy URLs | ⬜ Planned |
+| 7 | Visual redesign — modern responsive layout, light/dark theme (public + admin) | ✅ Done |
+| 8 | Deployment / cutover — container + managed DB, 301 redirects from legacy URLs | ⬜ Planned |
 
 ## Deployment target
 

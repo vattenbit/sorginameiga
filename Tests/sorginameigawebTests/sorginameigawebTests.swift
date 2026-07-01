@@ -82,7 +82,7 @@ struct sorginameigawebTests {
             try await app.testing().test(.GET, "perro/27", afterResponse: { res async in
                 #expect(res.status == .ok)
                 #expect(res.body.string.contains("SUNTORY ADONIS"))
-                #expect(res.body.string.contains("nombrepedigree"))
+                #expect(res.body.string.contains("pedigree-table"))
                 #expect(res.body.string.contains("/machos")) // back link
             })
         }
