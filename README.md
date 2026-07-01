@@ -157,7 +157,9 @@ pick up any recent changes.
 | 5 | Contact page (details only, matching current production) | ✅ Done |
 | 6 | Admin area — CRUD + photo management, with security fixes (bcrypt, sessions, validated uploads) | ✅ Done |
 | 7 | Visual redesign — modern responsive layout, light/dark theme (public + admin) | ✅ Done |
-| 8 | Deployment / cutover — container + managed DB, 301 redirects from legacy URLs | ⬜ Planned |
+| 8 | Deployment — Cloud Run + Neon + GCS images bucket, 301 redirects; **live**, pending domain/DNS cutover | 🚧 In progress |
+
+Deployment details are in [`deploy/DEPLOY.md`](deploy/DEPLOY.md).
 
 ## Deployment target
 
