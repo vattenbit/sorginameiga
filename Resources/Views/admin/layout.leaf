@@ -9,8 +9,15 @@
     </head>
     <body>
         <header id="admin_header">
-            <span id="admin_title">Administración Sorgiña-Meiga</span>
-            #import("headerRight")
+            <span id="admin_title"><a href="/admin">Administración Sorgiña-Meiga</a></span>
+            #if(username):
+            <span id="admin_session">
+                <span id="admin_user">#(username)</span>
+                <form method="post" action="/admin/logout" class="logout_form">
+                    <button type="submit">Salir</button>
+                </form>
+            </span>
+            #endif
         </header>
         <main id="admin_main">
             #import("content")

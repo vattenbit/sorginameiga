@@ -1,5 +1,4 @@
 #extend("admin/layout"):
-#export("headerRight", "")
 #export("content"):
 <form id="login_form" method="post" action="/admin/login">
     <h1>Acceso</h1>

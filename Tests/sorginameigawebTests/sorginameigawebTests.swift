@@ -1,4 +1,5 @@
 @testable import sorginameigaweb
+import Fluent
 import VaporTesting
 import Testing
 
@@ -181,6 +182,46 @@ struct sorginameigawebTests {
                 #expect(res.status == .ok)
                 #expect(res.body.string.contains("Panel de administración"))
             })
+        }
+    }
+
+    @Test("Admin dog CRUD is protected and creates/deletes a dog")
+    func adminDogCrud() async throws {
+        final class Box: @unchecked Sendable { var cookies: HTTPCookies?; var newID: Int? }
+        let box = Box()
+        try await withApp { app in
+            // Protected without a session.
+            try await app.testing().test(.GET, "admin/perros", afterResponse: { res async in
+                #expect(res.status == .seeOther)
+            })
+            // Log in.
+            try await app.testing().test(.POST, "admin/login", beforeRequest: { req in
+                try req.content.encode(["username": "Pilar&Estibaliz", "password": "changeme"], as: .urlEncodedForm)
+            }, afterResponse: { res async in box.cookies = res.headers.setCookie })
+
+            let before = try await Dog.query(on: app.db).count()
+
+            // Create.
+            var form = ["name": "TEST CRUD", "sex": "macho"]
+            for key in ["a", "b", "aa", "ab", "ba", "bb", "aaa", "aab", "aba", "abb", "baa", "bab", "bba", "bbb"] {
+                form[key] = ""
+            }
+            try await app.testing().test(.POST, "admin/perros", beforeRequest: { req in
+                if let c = box.cookies { req.headers.cookie = c }
+                try req.content.encode(form, as: .urlEncodedForm)
+            }, afterResponse: { res async in #expect(res.status == .seeOther) })
+
+            let created = try await Dog.query(on: app.db).filter(\.$name == "TEST CRUD").first()
+            #expect(created != nil)
+            box.newID = created?.id
+
+            // Delete (cleanup).
+            if let id = box.newID {
+                try await app.testing().test(.POST, "admin/perros/\(id)/borrar", beforeRequest: { req in
+                    if let c = box.cookies { req.headers.cookie = c }
+                }, afterResponse: { res async in #expect(res.status == .seeOther) })
+            }
+            #expect(try await Dog.query(on: app.db).count() == before)
         }
     }
 }
