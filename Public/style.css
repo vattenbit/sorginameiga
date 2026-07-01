@@ -1,336 +1,462 @@
-body{
-	font-family:Arial, Helvetica, sans-serif;
-	background-color: #FF7F00;
-	color: #FFF;
+/* ===========================================================================
+   Sorgiña Meiga — public site
+   Modernized identity: light surfaces, dark text, signature orange accent,
+   fully responsive. Design tokens in :root.
+   =========================================================================== */
+
+:root {
+    --bg: #ffe9cc;
+    --surface: #ffffff;
+    --text: #2a2a2a;
+    --text-soft: #3a3a3a;
+    --muted: #6f6a63;
+    --accent: #ff7f00;
+    --accent-dark: #e06e00;
+    --dark: #2b2b2b;
+    --border: #e8e3db;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, .06);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, .12);
+    --container: 1140px;
+    --header-h: 76px;
 }
 
-/* Cabecera */
-#cabecera{
-	margin:auto;
-	height:150px;
-	width:1000px;
-	background-image:url(images/cabecera.jpg);
-	background-repeat: no-repeat;
+/* Dark theme — toggled via data-theme on <html>. */
+[data-theme="dark"] {
+    --bg: #221913;
+    --surface: #241f1b;
+    --text: #ececec;
+    --text-soft: #cfcac2;
+    --muted: #9c968d;
+    --accent: #ff9124;
+    --accent-dark: #ff9124;
+    --dark: #100f0e;
+    --border: #38342f;
+    --shadow: 0 4px 20px rgba(0, 0, 0, .45);
+    --shadow-hover: 0 10px 30px rgba(0, 0, 0, .6);
 }
 
-#titulo{
-	font-size: 50px;
-	text-align: right;
-	font-style: italic;
-	padding-top: 40px;
+body { transition: background-color .2s, color .2s; }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-#bajo_titulo{
-	font-size: 10px;
-	color: #FF7F00;
-	width:1000px;
-	height:15px;
-	text-align: right;
+img { max-width: 100%; display: block; }
+a { color: var(--accent-dark); }
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-#bajo_titulo img{
-	border: 0px;	
+.site-main { flex: 1 0 auto; padding: 48px 0 64px; }
+
+/* ---------- Header ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .04);
 }
 
-#bajo_titulo #esp{
-	padding-left: 15px;
-	padding-right: 5px;
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: var(--header-h);
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-#bajo_titulo #ing{
-	padding-left: 5px;
-	padding-right: 10px;
+.brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text);
+    line-height: 1.1;
+    margin-right: auto;
 }
 
-/* Menu */
-#menu{
-	width:1000px;
-	text-align: right;
+.brand-name {
+    font-size: 26px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: .3px;
+}
+.brand-accent { color: var(--accent); }
+
+.brand-tag {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
 }
 
-#menu ul{
-	list-style-type:none;
-	margin: 0px;;
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
-#cabecera ul li{
-	font-size: 16px;
-	font-style: italic;
-	display: inline;
-	padding-left: 20px;	
+.main-nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: background .15s, color .15s;
+}
+.main-nav a:hover { background: var(--bg); color: var(--accent-dark); }
+
+.header-actions { display: flex; align-items: center; gap: 14px; }
+
+.lang-switch { display: flex; gap: 8px; align-items: center; }
+.lang-switch img {
+    width: 26px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    transition: transform .15s;
+}
+.lang-switch a:hover img { transform: scale(1.12); }
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+.theme-toggle:hover { color: var(--accent-dark); border-color: var(--accent); }
+.theme-toggle svg { width: 18px; height: 18px; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Hamburger — hidden on desktop, shown on small screens via media query. */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+.nav-toggle:hover { color: var(--accent-dark); border-color: var(--accent); }
+.nav-toggle svg { width: 22px; height: 22px; }
+.nav-toggle .icon-close { display: none; }
+.header-inner.nav-open .nav-toggle .icon-menu { display: none; }
+.header-inner.nav-open .nav-toggle .icon-close { display: inline; }
+
+/* ---------- Headings ---------- */
+.page-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin: 0 0 28px;
+    position: relative;
+    padding-bottom: 14px;
+}
+.page-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 64px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--accent);
 }
 
-#cabecera ul li a{
-	text-decoration:none;
+/* ---------- Home hero ---------- */
+.hero {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 48px;
+    align-items: center;
+}
+.hero-text { font-size: 17px; color: var(--text-soft); }
+.hero-text p { margin: 0 0 16px; }
+.hero-photo img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-#cabecera ul li a:link{
-	color: #FFF;
-	text-decoration:none;
+/* ---------- Card grid (dog listings) ---------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 26px;
 }
 
-#cabecera ul li a:visited{
-	color: #FFF;
-	text-decoration:none;
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform .18s, box-shadow .18s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 
+.card-photo { aspect-ratio: 1 / 1; overflow: hidden; }
+.card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.card:hover .card-photo img { transform: scale(1.05); }
+
+.card-name {
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
 }
 
-#cabecera ul li a:hover{
-	color: #333;
-	text-decoration:none;
+/* ---------- Dog detail ---------- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+}
+.back-link:hover { color: var(--accent-dark); }
 
+.dog-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 48px;
+    align-items: start;
 }
 
-/* Pie de Pagina */
-#piedepagina{
-	width: 1000px;
-	height: 13px;
-	background-color: #333;
-	margin: auto;
-	font-size: 10px;
-	color: #FF7F00;
-	
+.dog-photo-main img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.dog-thumbs {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+.dog-thumbs img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform .15s;
+}
+.dog-thumbs a:hover img { transform: scale(1.06); }
+
+.pedigree-title { font-size: 20px; margin: 0 0 16px; }
+.pedigree-scroll { overflow-x: auto; }
+.pedigree-table {
+    border-collapse: separate;
+    border-spacing: 6px;
+    table-layout: fixed;
+    min-width: 560px;
+    width: 100%;
+    font-size: 12px;
+}
+.pedigree-table td.ped { vertical-align: middle; }
+.ped-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 10px;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}
+.ped1 .ped-box { border-left-color: var(--accent); font-weight: 600; }
+.ped2 .ped-box { border-left-color: #f0a04b; }
+.ped3 .ped-box { border-left-color: var(--border); color: var(--muted); }
+
+/* ---------- Media (galleries & puppies) ---------- */
+.media-block { margin-bottom: 44px; }
+.media-title {
+    font-size: 22px;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+.badge {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-left: 8px;
 }
 
-#piedepagina #contador{	
-	float: left;
-	padding-left: 10px;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+}
+.photo-item {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.photo-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.photo-item:hover img { transform: scale(1.07); }
+
+.empty-message {
+    text-align: center;
+    color: var(--muted);
+    font-size: 18px;
+    padding: 48px 0;
 }
 
-#piedepagina #creditos{	
-	float: right;
-	padding-right: 10px;
+/* ---------- Contact ---------- */
+.contact-wrap { max-width: 760px; margin: 0 auto; text-align: center; }
+.contact-intro {
+    font-size: 18px;
+    color: var(--text-soft);
+    margin: 0 auto 36px;
+    max-width: 580px;
+}
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+}
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 22px;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.contact-method:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+}
+.contact-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 127, 0, .12);
+    color: var(--accent-dark);
+    margin-bottom: 8px;
+    transition: background .18s;
+}
+.contact-method:hover .contact-icon { background: rgba(255, 127, 0, .2); }
+.contact-icon svg { width: 28px; height: 28px; }
+.contact-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+.contact-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    word-break: break-word;
+}
+.contact-method:hover .contact-value { color: var(--accent-dark); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+    flex-shrink: 0;
+    background: var(--dark);
+    color: #cfcac2;
+    font-size: 13px;
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.footer-inner p { margin: 0; }
+.footer-count strong { color: var(--accent); }
+.footer-credits { color: #9a948c; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; }
+    .hero-photo { order: -1; max-width: 420px; margin: 0 auto; }
+    .dog-layout { grid-template-columns: 1fr; gap: 30px; }
+    .dog-photo-main img { max-width: 420px; }
 }
 
-#piedepagina #creditos a{	
-	color: #FFF;
-	text-decoration:none;
+/* Collapsible hamburger menu on small screens. */
+@media (max-width: 760px) {
+    .nav-toggle { display: inline-flex; }
+    .main-nav {
+        display: none;
+        order: 5;
+        width: 100%;
+        flex-direction: column;
+        gap: 2px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+    }
+    .header-inner.nav-open .main-nav { display: flex; }
+    .main-nav a { padding: 12px 14px; border-radius: 8px; }
 }
 
-/* Pagina de Index */
-#cuerpo_index{
-	width: 1000px;
-	height: 450px;
-	margin: auto;
-	text-align: center;
-}
-
-#texto_presentacion{
-	width: 600px;
-	float: left;
-	padding-left: 20px;
-	padding-top:25px;
-	font-size: 15px;
-	text-align: justify;
-}
-
-#foto_presentacion{
-	width: 320px;
-	float: right;
-	padding-left: 20px;
-	padding-top: 55px;
-}
-
-/* Pagina de Perros */
-#cuerpo_perros{
-	width: 1000px;
-	margin: auto;
-}
-
-#titulosexo{
-	font-size: 30px;
-}
-
-#tablaperros{
-	padding-top:10px;
-	padding-bottom:50px;
-}
-
-.cuadroperro{
-	width:250px;
-	font-size:20px;
-	text-align:center;
-}
-
-#titulo_perro{
-	margin-top:10px;
-	margin-bottom:20px;
-	font-size:30px;
-	text-align:center;
-}
-
-#foto_perro{
-	margin-bottom:20px;
-	text-align:center;
-}
-
-#botonvolver{
-	text-align:center;
-	font-size:30px;
-}
-
-#botonvolver a{
-	padding:5px;
-	text-decoration:none;
-	color:#FFF;
-	background-color:#333;
-}
-
-#nombrepedigree{
-	background-color:#333;
-	padding:3px;	
-}
-
-#tablapedigree{
-	font-size:10px;
-	text-align:left;
-	padding-left:50px;
-}
-
-/* Página de contacto */
-#contenedorformulario{
-	padding-left: 30px;
-}
-
-#correoytelefono{
-	font-size: 30px;
-	text-align: center;
-	font-weight: bold;
-}
-
-/* ===== Fase 3: Perros (listado + ficha + pedigrí) ===== */
-
-/* Listado de perros */
-#tablaperros{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 25px;
-}
-
-.cuadroperro img.foto_listado{
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border: 3px solid #333;
-}
-
-.cuadroperro a{
-	text-decoration: none;
-	color: #FFF;
-}
-
-/* Ficha de perro */
-#ficha_perro{
-	display: flex;
-	justify-content: center;
-	gap: 40px;
-	align-items: flex-start;
-}
-
-#foto_perro_principal{
-	width: 360px;
-	height: 360px;
-	object-fit: cover;
-	border: 4px solid #333;
-}
-
-#fotos_extra{
-	display: flex;
-	gap: 10px;
-	margin-top: 10px;
-}
-
-.foto_perro_thumb{
-	width: 113px;
-	height: 113px;
-	object-fit: cover;
-	border: 3px solid #333;
-}
-
-/* Árbol de pedigrí */
-#tablapedigree{
-	border-collapse: collapse;
-	table-layout: fixed;
-	width: 600px;
-	font-size: 11px;
-}
-
-#tablapedigree td.ped{
-	width: 200px;
-	vertical-align: middle;
-	padding: 3px;
-}
-
-.nombrepedigree{
-	background-color: #333;
-	color: #FFF;
-	padding: 6px 8px;
-	min-height: 16px;
-	border-radius: 3px;
-}
-
-#botonvolver{
-	margin-top: 30px;
-}
-
-/* ===== Fase 4: Galerías y cachorros ===== */
-
-.bloque_media{
-	margin-bottom: 35px;
-}
-
-.titulo_media{
-	font-size: 22px;
-	font-style: italic;
-	margin-bottom: 12px;
-	border-bottom: 1px solid #FFF;
-	padding-bottom: 4px;
-}
-
-.titulo_media .badge{
-	font-size: 15px;
-	font-style: normal;
-}
-
-.galeria_fotos{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 12px;
-}
-
-.foto_galeria{
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-	border: 3px solid #333;
-}
-
-#mensaje_vacio{
-	text-align: center;
-	font-size: 20px;
-	padding: 40px 0;
-}
-
-/* ===== Fase 5: Contacto ===== */
-
-#contacto{
-	text-align: center;
-	padding-top: 20px;
-}
-
-#contacto_texto{
-	font-size: 18px;
-	max-width: 600px;
-	margin: 0 auto 20px auto;
-}
-
-#contacto_imagen{
-	max-width: 400px;
-	height: auto;
-}
-
-#correoytelefono a{
-	color: #FFF;
-	text-decoration: none;
+@media (max-width: 680px) {
+    .site-main { padding: 32px 0 48px; }
+    .footer-inner { justify-content: center; text-align: center; }
 }

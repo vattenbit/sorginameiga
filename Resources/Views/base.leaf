@@ -2,13 +2,35 @@
 <html lang="#(layout.lang)">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            // Set the theme before paint to avoid a flash of the wrong theme.
+            (function () {
+                var t = localStorage.getItem('theme');
+                if (!t) {
+                    t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            })();
+            function toggleTheme() {
+                var el = document.documentElement;
+                var next = el.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                el.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            }
+            function toggleNav() {
+                document.querySelector('.header-inner').classList.toggle('nav-open');
+            }
+        </script>
         <link href="/style.css" type="text/css" rel="stylesheet" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
-        <title>Sorgiña Meiga - #(layout.t.title)</title>
+        <title>Sorgiña Meiga · #(layout.t.title)</title>
     </head>
     <body>
         #extend("partials/header")
-        #import("content")
+        <main class="site-main">
+            #import("content")
+        </main>
         #extend("partials/footer")
     </body>
 </html>

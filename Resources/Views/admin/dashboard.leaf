@@ -7,6 +7,69 @@
     <a href="/admin/cachorros">Cachorros</a>
     <a href="/admin/galerias">Galerías</a>
 </nav>
-<p class="admin_hint">La gestión de fotos se activará en la siguiente fase.</p>
+
+<section class="version-notes">
+    <h2>Notas de versión</h2>
+
+    <article class="version">
+        <h3>Versión 2.0 <span class="version-date">[2026] · Actual</span></h3>
+        <p class="version-scope">Renovación completa</p>
+        <ul>
+            <li><strong>Migración completa</strong> de PHP a Swift/Vapor, contenerizada.</li>
+            <li>Base de datos migrada de MySQL a <strong>PostgreSQL</strong>.</li>
+            <li>Rediseño visual moderno y <strong>responsive</strong> (adaptable a móvil).</li>
+            <li>Modo <strong>claro / oscuro</strong>.</li>
+            <li>Seguridad: contraseñas cifradas (bcrypt), sesiones reales y validación de las imágenes subidas.</li>
+            <li>Gestión de fotos con <strong>borrado individual</strong>.</li>
+        </ul>
+    </article>
+
+    <article class="version">
+        <h3>Versión 1.3 <span class="version-date">[2018]</span></h3>
+        <p class="version-scope">En la web</p>
+        <ul>
+            <li>Mejorar el mensaje de confirmación tras enviar un correo.</li>
+            <li>Impedir datos inválidos al enviar un correo.</li>
+        </ul>
+        <p class="version-scope">En Administración</p>
+        <ul>
+            <li>Posibilidad de borrar fotos individualmente.</li>
+        </ul>
+    </article>
+
+    <article class="version">
+        <h3>Versión 1.2 <span class="version-date">[Noviembre 2017]</span></h3>
+        <p class="version-scope">En Administración</p>
+        <ul>
+            <li>Nueva metodología de login (para evitar auto-borrados por bots).</li>
+            <li>Uso de plantillas y posibilidad de modificar el nombre de la galería.</li>
+        </ul>
+    </article>
+
+    <article class="version">
+        <h3>Versión 1.1 <span class="version-date">[Febrero 2015]</span></h3>
+        <p class="version-scope">En la web</p>
+        <ul>
+            <li>Arreglada la traducción de «¿Quiénes Somos?».</li>
+            <li>Arregladas las secciones de Cachorros y Galerías.</li>
+            <li>Arreglada y reeditada la sección de Contactos, incluida su traducción.</li>
+            <li>Agregado el enlace en el pie de página.</li>
+        </ul>
+        <p class="version-scope">En Administración</p>
+        <ul>
+            <li>Agregada la sección de Cachorros.</li>
+            <li>Agregada la sección de Galería.</li>
+            <li>Posibilidad de agregar fotos en ambas.</li>
+            <li>Arreglados problemas de redireccionamiento tras hacer cambios.</li>
+        </ul>
+    </article>
+
+    <article class="version">
+        <h3>Versión 1.0 <span class="version-date">[Noviembre 2013]</span></h3>
+        <ul>
+            <li>La web funciona de manera básica; solo se pueden agregar perros.</li>
+        </ul>
+    </article>
+</section>
 #endexport
 #endextend
